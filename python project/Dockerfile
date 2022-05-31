@@ -7,7 +7,7 @@ RUN python3 -m venv ./.venv
 RUN . ./.venv/bin/activate
 RUN pip install -r requirements/backend.in
 
-COPY ./build/index.html /app/build/index.html
 COPY ./spaceship /app/spaceship
+COPY ./builder/index.html /app/builder/index.html
 
 CMD ["uvicorn", "spaceship.main:app", "--host=0.0.0.0", "--port=8080"] 
