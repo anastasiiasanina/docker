@@ -8,7 +8,7 @@ def hello_world() -> dict:
     return {'msg': 'Hello, World!'}
 
 @router.get('/matrix')
-def get_matrix();
+def get_matrix():
     matrix_a = np.random.rand(10, 10)
     matrix_b = np.random.rand(10, 10)
     product = np.matmul(matrix_a, matrix_b)
