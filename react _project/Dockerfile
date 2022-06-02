@@ -2,8 +2,8 @@ FROM node:14.17-alpine as build
 
 WORKDIR /app
 
-COPY package.json /app/requirements
-COPY package-lock.json /app/requirements
+COPY package.json /app/requirements/package.json
+COPY package-lock.json /app/requirements/package-lock.json
 
 RUN npm install
 
