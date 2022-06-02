@@ -1,10 +1,13 @@
 FROM node:14.17-alpine as build
 
-COPY package.json ./
-COPY package-lock.json ./
+WORKDIR /app
+
+COPY package.json /app/requirements
+COPY package-lock.json /app/requirements
 
 RUN npm install
 
-COPY . .
+COPY ./src/App.js /app/src/App.js 
+COPY ./src/index.js /app/src/index.js 
 
 CMD ["npm", "start"]
